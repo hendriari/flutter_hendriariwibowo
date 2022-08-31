@@ -1,24 +1,24 @@
 void main() {
 
   ///nilai faktorial 10
-  var a = 10;
-  var factorialA = 1;
+  num a = 10.0;
+  num factorialA = 1;
   for (var i = a; i >= 1; i--) {
     factorialA *= i;
   }
   print('nilai Faktorial dari 10! adalah : $factorialA');
 
   ///nilai faktorial 20
-  var b = 20;
-  var factorialB = 1;
+  num b = 20.0;
+  num factorialB = 1;
   for (var o = b; o >=1; o--){
     factorialB *= o;
   }
   print('nilai Factorial dari 20! adalah : $factorialB');
 
   ///nilai faktorial 30
-  var c = 30;
-  var factorialC = 1;
+  num c = 30.0;
+  num factorialC = 1;
   for(var p = c; p >=1; p--){
     factorialC *= p;
   }
