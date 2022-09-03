@@ -1,20 +1,14 @@
-void main() {
-  ambilOrder().then((value) {
-    print('You ordered: $value');
-  })
-      .catchError((error) {
-    print('Sorry. $error');
-  });
-  print('Getting your order...');
+List data = [1, 2, 3, 4];
+int pengali = 9;
+
+Future<void> pengalian(List<dynamic> data, int pengali) async {
+  List pengulangan = [];
+  for (int i = 0; i < data.length; i++) {
+    pengulangan.add(data[i] * pengali);
+  }
+  print(pengulangan);
 }
 
-Future<String> ambilOrder() {
-  return Future.delayed(Duration(seconds: 3), () {
-    var stockTersedia = false;
-    if (stockTersedia) {
-      return 'Coffee Boba';
-    } else {
-      throw 'Our stock is not enough.';
-    }
-  });
+void main() {
+  pengalian(data, pengali);
 }
