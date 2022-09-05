@@ -1,28 +1,6 @@
-class Hewan {
-  int kucing = 5;
-  int kambing = 35;
-  int serigala = 40;
-  int harimau = 120;
-  int jerapah = 90;
-  int ikan_mas = 1;
-  int ikan_duyung = 18;
-  int kudanil = 110;
-  int? gajah;
-}
+import 'data_mobil.dart';
 
-class Mobil extends Hewan {
-  int kapasitasMax = 600;
-  List hewan = [
-    'kucing',
-    'kambing',
-    'serigala',
-    'harimau',
-    'jerapah',
-    'ikan cupang',
-    'ikan sepat',
-    'kudanil'
-  ];
-
+class Muat extends Mobil {
   get totalBeratHewan =>
       kucing +
       kambing +
@@ -33,20 +11,20 @@ class Mobil extends Hewan {
       ikan_duyung +
       kudanil;
 
-  void totalKeseluruhan() {
+  void beratAngkut() {
     if (totalBeratHewan < kapasitasMax) {
       hewan.add('gajah');
-      print('muatan ditambah : $hewan');
+      print('Muatan ditambah : $hewan');
     } else {
-      print('muatan sudah penuh');
+      print('Muatan sudah maximal');
     }
   }
 }
 
 void main() {
-  var muatanHewan = Mobil();
+  var muatanHewan = Muat();
   print('total berat hewan : ${muatanHewan.totalBeratHewan} kg');
   print('hewan yang di angkut : ${muatanHewan.hewan}');
   print('maximal muatan mobil : ${muatanHewan.kapasitasMax} kg');
-  muatanHewan.totalKeseluruhan();
+  muatanHewan.beratAngkut();
 }
