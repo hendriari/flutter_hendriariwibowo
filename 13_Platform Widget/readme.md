@@ -1,3 +1,3 @@
 # Material App
 
-![material app](screenshoot/records_materialapp.gif)
+![material app](screenshoot/records_material_app.gif)
