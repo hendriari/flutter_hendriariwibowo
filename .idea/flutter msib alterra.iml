@@ -66,6 +66,9 @@
       <excludeFolder url="file://$MODULE_DIR$/15_Flutter Layout/praktikum/flutter_layout/linux/flutter/ephemeral/.plugin_symlinks/path_provider_linux/.dart_tool" />
       <excludeFolder url="file://$MODULE_DIR$/15_Flutter Layout/praktikum/flutter_layout/linux/flutter/ephemeral/.plugin_symlinks/path_provider_linux/build" />
       <excludeFolder url="file://$MODULE_DIR$/15_Flutter Layout/praktikum/flutter_layout/linux/flutter/ephemeral/.plugin_symlinks/path_provider_linux/.pub" />
+      <excludeFolder url="file://$MODULE_DIR$/16_Assets/praktikum/praktek/build" />
+      <excludeFolder url="file://$MODULE_DIR$/16_Assets/praktikum/praktek/.pub" />
+      <excludeFolder url="file://$MODULE_DIR$/16_Assets/praktikum/praktek/.dart_tool" />
     </content>
     <orderEntry type="jdk" jdkName="Android API 32 Platform" jdkType="Android SDK" />
     <orderEntry type="sourceFolder" forTests="false" />
