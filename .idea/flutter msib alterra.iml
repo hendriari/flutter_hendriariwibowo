@@ -51,6 +51,21 @@
       <excludeFolder url="file://$MODULE_DIR$/14_Flutter Command Line Interface and Flutter package management/praktikum/praktek/.dart_tool" />
       <excludeFolder url="file://$MODULE_DIR$/14_Flutter Command Line Interface and Flutter package management/praktikum/praktek/build" />
       <excludeFolder url="file://$MODULE_DIR$/14_Flutter Command Line Interface and Flutter package management/praktikum/praktek/.pub" />
+      <excludeFolder url="file://$MODULE_DIR$/15_Flutter Layout/praktikum/flutter_layout/.pub" />
+      <excludeFolder url="file://$MODULE_DIR$/15_Flutter Layout/praktikum/flutter_layout/.dart_tool" />
+      <excludeFolder url="file://$MODULE_DIR$/15_Flutter Layout/praktikum/flutter_layout/build" />
+      <excludeFolder url="file://$MODULE_DIR$/15_Flutter Layout/praktikum/flutter_layout/windows/flutter/ephemeral/.plugin_symlinks/path_provider_windows/example/.dart_tool" />
+      <excludeFolder url="file://$MODULE_DIR$/15_Flutter Layout/praktikum/flutter_layout/windows/flutter/ephemeral/.plugin_symlinks/path_provider_windows/example/build" />
+      <excludeFolder url="file://$MODULE_DIR$/15_Flutter Layout/praktikum/flutter_layout/windows/flutter/ephemeral/.plugin_symlinks/path_provider_windows/example/.pub" />
+      <excludeFolder url="file://$MODULE_DIR$/15_Flutter Layout/praktikum/flutter_layout/windows/flutter/ephemeral/.plugin_symlinks/path_provider_windows/build" />
+      <excludeFolder url="file://$MODULE_DIR$/15_Flutter Layout/praktikum/flutter_layout/windows/flutter/ephemeral/.plugin_symlinks/path_provider_windows/.dart_tool" />
+      <excludeFolder url="file://$MODULE_DIR$/15_Flutter Layout/praktikum/flutter_layout/windows/flutter/ephemeral/.plugin_symlinks/path_provider_windows/.pub" />
+      <excludeFolder url="file://$MODULE_DIR$/15_Flutter Layout/praktikum/flutter_layout/linux/flutter/ephemeral/.plugin_symlinks/path_provider_linux/example/build" />
+      <excludeFolder url="file://$MODULE_DIR$/15_Flutter Layout/praktikum/flutter_layout/linux/flutter/ephemeral/.plugin_symlinks/path_provider_linux/example/.dart_tool" />
+      <excludeFolder url="file://$MODULE_DIR$/15_Flutter Layout/praktikum/flutter_layout/linux/flutter/ephemeral/.plugin_symlinks/path_provider_linux/example/.pub" />
+      <excludeFolder url="file://$MODULE_DIR$/15_Flutter Layout/praktikum/flutter_layout/linux/flutter/ephemeral/.plugin_symlinks/path_provider_linux/.dart_tool" />
+      <excludeFolder url="file://$MODULE_DIR$/15_Flutter Layout/praktikum/flutter_layout/linux/flutter/ephemeral/.plugin_symlinks/path_provider_linux/build" />
+      <excludeFolder url="file://$MODULE_DIR$/15_Flutter Layout/praktikum/flutter_layout/linux/flutter/ephemeral/.plugin_symlinks/path_provider_linux/.pub" />
     </content>
     <orderEntry type="jdk" jdkName="Android API 32 Platform" jdkType="Android SDK" />
     <orderEntry type="sourceFolder" forTests="false" />
