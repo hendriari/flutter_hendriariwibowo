@@ -69,6 +69,9 @@
       <excludeFolder url="file://$MODULE_DIR$/16_Assets/praktikum/praktek/build" />
       <excludeFolder url="file://$MODULE_DIR$/16_Assets/praktikum/praktek/.pub" />
       <excludeFolder url="file://$MODULE_DIR$/16_Assets/praktikum/praktek/.dart_tool" />
+      <excludeFolder url="file://$MODULE_DIR$/17_forml_input_button/praktikum/praktek/.dart_tool" />
+      <excludeFolder url="file://$MODULE_DIR$/17_forml_input_button/praktikum/praktek/.pub" />
+      <excludeFolder url="file://$MODULE_DIR$/17_forml_input_button/praktikum/praktek/build" />
     </content>
     <orderEntry type="jdk" jdkName="Android API 32 Platform" jdkType="Android SDK" />
     <orderEntry type="sourceFolder" forTests="false" />
