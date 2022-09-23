@@ -10,6 +10,6 @@ checkbox membutuhkan property boolean radio untuk menentukan pilihan
 
 ### Button
 
-sebenarnya masih banyak jenis2 button, cuman materi alta hanya memberi 3 contoh button, contoh
-tersebut adalah button yang sering digunakan
+Button digunakan untuk media berpindah halaman, banyak jenis button yang bisa digunakan, sesuai
+kebutuhan saat ngoding
 
