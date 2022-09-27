@@ -6,7 +6,18 @@ import 'package:praktek/presentation/add_contact_info.dart';
 import 'package:praktek/presentation/contact_detail.dart';
 
 class HomePage extends StatefulWidget {
-  const HomePage({Key? key}) : super(key: key);
+  String? detailNames;
+  String? detailNumbers;
+  String? detailBirtday;
+  String? detailHome;
+
+   HomePage(
+      {Key? key,
+      this.detailNames,
+      this.detailNumbers,
+      this.detailBirtday,
+      this.detailHome})
+      : super(key: key);
 
   @override
   State<HomePage> createState() => _HomePageState();
@@ -17,12 +28,37 @@ class _HomePageState extends State<HomePage> {
   late TextEditingController _numberEditingController;
   late GlobalKey<FormState> _key;
 
+  String? _names;
+  String? _numbers;
+  String? _detailBirthday;
+  String? _detailHome;
+
+
+  List<Contact> kontaks = kontak;
+
   @override
   void initState() {
     super.initState();
-    _nameEditingController = TextEditingController(text: '');
-    _numberEditingController = TextEditingController(text: '');
+    _names = '';
+    _numbers = '';
+    _detailBirthday = widget.detailBirtday;
+    _detailHome = widget.detailHome;
+    _nameEditingController = TextEditingController(text: _names);
+    _numberEditingController = TextEditingController(text: _numbers);
     _key = GlobalKey();
+  }
+
+  void addContact() {
+    setState(() {
+      kontaks.add(Contact(name: _names!, telephon: _numbers!, birthday: 'No more data', home: 'No more data'));
+    });
+  }
+
+  @override
+  void dispose() {
+    super.dispose();
+    _nameEditingController.dispose();
+    _numberEditingController.dispose();
   }
 
   @override
@@ -145,6 +181,10 @@ class _HomePageState extends State<HomePage> {
                       MaterialPageRoute(
                         builder: (context) => ContactDetail(
                           kontak: contact,
+                          names: _names!,
+                          numbers: _numbers!,
+                          detailBirthday: _detailBirthday == null ? 'No more data' : _detailBirthday!,
+                          detailHome: _detailHome == null ? 'No more data' : _detailHome!,
                         ),
                       ),
                     );
@@ -158,7 +198,9 @@ class _HomePageState extends State<HomePage> {
                           height: 75,
                           width: 75,
                           child: CircleAvatar(
-                            backgroundImage: NetworkImage(contact.image!),
+                            backgroundImage: NetworkImage(contact.image == null
+                                ? 'https://www.freeiconspng.com/thumbs/account-icon/account-icon-33.png'
+                                : contact.image!),
                           ),
                         ),
                         const SizedBox(
@@ -202,9 +244,6 @@ class _HomePageState extends State<HomePage> {
                 child: Padding(
                   padding: const EdgeInsets.fromLTRB(10, 0, 10, 0),
                   child: Column(
-                    //mainAxisSize: MainAxisSize.max,
-                    //crossAxisAlignment: CrossAxisAlignment.center,
-                    //mainAxisAlignment: MainAxisAlignment.start,
                     children: [
                       const SizedBox(
                         height: 10,
@@ -237,6 +276,11 @@ class _HomePageState extends State<HomePage> {
                             onPressed: () {
                               if (_key.currentState!.validate()) {
                                 Navigator.pop(context);
+                                setState(() {
+                                  addContact();
+                                });
+                                _nameEditingController.clear();
+                                _numberEditingController.clear();
                               }
                             },
                             icon: const Icon(
@@ -251,6 +295,9 @@ class _HomePageState extends State<HomePage> {
                       ),
                       TextFormField(
                         controller: _nameEditingController,
+                        onChanged: (value) {
+                          _names = value;
+                        },
                         cursorColor: Colors.cyan,
                         validator: (value) {
                           if (value == null || value.isEmpty) {
@@ -282,6 +329,9 @@ class _HomePageState extends State<HomePage> {
                       ),
                       TextFormField(
                         controller: _numberEditingController,
+                        onChanged: (value) {
+                          _numbers = value;
+                        },
                         cursorColor: Colors.cyan,
                         keyboardType: TextInputType.number,
                         validator: (value) {

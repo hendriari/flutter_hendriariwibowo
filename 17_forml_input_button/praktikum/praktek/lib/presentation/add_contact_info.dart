@@ -1,5 +1,7 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:praktek/data/contact_model.dart';
+import 'package:praktek/data/contacts_list_data.dart';
 import 'package:praktek/presentation/home_page.dart';
 
 class AddContactInfo extends StatefulWidget {
@@ -16,14 +18,29 @@ class _AddContactInfoState extends State<AddContactInfo> {
   late TextEditingController _homeEditingController;
   late GlobalKey<FormState> _key;
 
+  String? _detailNames;
+  String? _detailMobile;
+  String? _detailBirthday;
+  String? _detailHome;
+
+  List<Contact> kontaks = kontak;
+
   @override
   void initState() {
     super.initState();
-    _nameEditingController = TextEditingController(text: '');
-    _mobileEditingController = TextEditingController(text: '');
-    _birthdayEditingController = TextEditingController(text: '');
-    _homeEditingController = TextEditingController(text: '');
+    _nameEditingController = TextEditingController(text: _detailNames);
+    _mobileEditingController = TextEditingController(text: _detailMobile);
+    _birthdayEditingController = TextEditingController(text: _detailBirthday);
+    _homeEditingController = TextEditingController(text: _detailHome);
     _key = GlobalKey();
+  }
+
+  void addDetailContact() {
+    kontaks.add(Contact(
+        name: _detailNames!,
+        telephon: _detailMobile!,
+        birthday: _detailBirthday!,
+        home: _detailHome!));
   }
 
   @override
@@ -67,8 +84,16 @@ class _AddContactInfoState extends State<AddContactInfo> {
                           if (_key.currentState!.validate()) {
                             Navigator.of(context).pushAndRemoveUntil(
                                 MaterialPageRoute(
-                                    builder: (context) => const HomePage()),
+                                    builder: (context) => HomePage(
+                                          detailNames: _detailNames!,
+                                          detailNumbers: _detailMobile!,
+                                          detailBirtday: _detailBirthday!,
+                                          detailHome: _detailHome!,
+                                        )),
                                 (Route<dynamic> route) => false);
+                            setState(() {
+                              addDetailContact();
+                            });
                           }
                         },
                         icon: const Icon(
@@ -106,6 +131,9 @@ class _AddContactInfoState extends State<AddContactInfo> {
                     }
                     return null;
                   },
+                  onChanged: (value) {
+                    _detailNames = value;
+                  },
                   decoration: InputDecoration(
                       label: const Text('Name'),
                       labelStyle: const TextStyle(color: Colors.cyan),
@@ -138,6 +166,9 @@ class _AddContactInfoState extends State<AddContactInfo> {
                       return 'must be filled';
                     }
                     return null;
+                  },
+                  onChanged: (value) {
+                    _detailMobile = value;
                   },
                   decoration: InputDecoration(
                       label: const Text('Mobile'),
@@ -172,6 +203,9 @@ class _AddContactInfoState extends State<AddContactInfo> {
                     }
                     return null;
                   },
+                  onChanged: (value) {
+                    _detailBirthday = value;
+                  },
                   decoration: InputDecoration(
                     label: const Text('Birthday'),
                     labelStyle: const TextStyle(color: Colors.cyan),
@@ -205,6 +239,9 @@ class _AddContactInfoState extends State<AddContactInfo> {
                       return 'must be filled';
                     }
                     return null;
+                  },
+                  onChanged: (value) {
+                    _detailHome = value;
                   },
                   decoration: InputDecoration(
                     label: const Text('Home'),

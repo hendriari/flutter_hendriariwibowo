@@ -1,10 +1,22 @@
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:praktek/data/contact_model.dart';
 
 class ContactDetail extends StatelessWidget {
   final Contact kontak;
+  final String names;
+  final String numbers;
+  final String detailBirthday;
+  final String detailHome;
 
-  const ContactDetail({Key? key, required this.kontak}) : super(key: key);
+  const ContactDetail({
+    Key? key,
+    required this.kontak,
+    required this.names,
+    required this.numbers,
+    required this.detailBirthday,
+    required this.detailHome,
+  }) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -30,7 +42,9 @@ class ContactDetail extends StatelessWidget {
                   children: [
                     CircleAvatar(
                       radius: 48,
-                      backgroundImage: NetworkImage(kontak.image!),
+                      backgroundImage: NetworkImage(kontak.image == null
+                          ? 'https://www.freeiconspng.com/thumbs/account-icon/account-icon-33.png'
+                          : kontak.image!),
                     ),
                     const SizedBox(
                       height: 10,
@@ -162,7 +176,7 @@ class ContactDetail extends StatelessWidget {
                   Column(
                     children: [
                       Text(
-                        '${kontak.telephon}',
+                        kontak.telephon,
                       ),
                       const Text(
                         'Mobile | Konoha',
@@ -250,6 +264,60 @@ class ContactDetail extends StatelessWidget {
             Padding(
               padding: const EdgeInsets.fromLTRB(45, 0, 0, 10),
               child: Text('Kirim Pesan ke ${kontak.telephon}'),
+            ),
+            const Padding(
+              padding: EdgeInsets.all(10),
+              child: Divider(
+                color: Colors.grey,
+              ),
+            ),
+            Padding(
+              padding: const EdgeInsets.fromLTRB(10, 8, 0, 10),
+              child: Row(
+                children: const [
+                  Icon(
+                    Icons.calendar_month_outlined,
+                    color: Colors.cyan,
+                  ),
+                  SizedBox(
+                    width: 10,
+                  ),
+                  Text('Birhday'),
+                ],
+              ),
+            ),
+            Padding(
+              padding: const EdgeInsets.fromLTRB(45, 0, 0, 10),
+              child: Text(
+                  detailBirthday),
+            ),
+            const Padding(
+              padding: EdgeInsets.all(10),
+              child: Divider(
+                color: Colors.grey,
+              ),
+            ),
+            Padding(
+              padding: const EdgeInsets.fromLTRB(10, 8, 0, 0),
+              child: Row(
+                children: const [
+                  Icon(
+                    CupertinoIcons.location,
+                    color: Colors.cyan,
+                  ),
+                  SizedBox(
+                    width: 10,
+                  ),
+                  Text('Home'),
+                ],
+              ),
+            ),
+            Padding(
+              padding: const EdgeInsets.fromLTRB(45, 0, 0, 10),
+              child: Text(detailHome),
+            ),
+            const SizedBox(
+              height: 15,
             ),
           ],
         ),
