@@ -102,6 +102,9 @@
       <excludeFolder url="file://$MODULE_DIR$/19_Dialog Bottom Sheed/praktikum/praktik/.dart_tool" />
       <excludeFolder url="file://$MODULE_DIR$/19_Dialog Bottom Sheed/praktikum/praktik/build" />
       <excludeFolder url="file://$MODULE_DIR$/19_Dialog Bottom Sheed/praktikum/praktik/.pub" />
+      <excludeFolder url="file://$MODULE_DIR$/20_Flutter Navigation/praktikum/praktik/.pub" />
+      <excludeFolder url="file://$MODULE_DIR$/20_Flutter Navigation/praktikum/praktik/.dart_tool" />
+      <excludeFolder url="file://$MODULE_DIR$/20_Flutter Navigation/praktikum/praktik/build" />
     </content>
     <orderEntry type="jdk" jdkName="Android API 32 Platform" jdkType="Android SDK" />
     <orderEntry type="sourceFolder" forTests="false" />
