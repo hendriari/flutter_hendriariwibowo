@@ -15,3 +15,4 @@ dianimasikan. Implicit animation sendirilah yang akan mengatur efek animasi dari
 
 explicit animation kita sebagai developer yang mengatur bagaimana animasi akan berjalan. Kita
 memanfaatkan objek AnimationController untuk mengatur animasi yang kita inginkan.
+
