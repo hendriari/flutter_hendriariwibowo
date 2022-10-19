@@ -267,6 +267,9 @@
       <excludeFolder url="file://$MODULE_DIR$/weekly2/praktik/windows/flutter/ephemeral/.plugin_symlinks/path_provider_windows/.dart_tool" />
       <excludeFolder url="file://$MODULE_DIR$/weekly2/praktik/windows/flutter/ephemeral/.plugin_symlinks/path_provider_windows/build" />
       <excludeFolder url="file://$MODULE_DIR$/weekly2/praktik/windows/flutter/ephemeral/.plugin_symlinks/path_provider_windows/.pub" />
+      <excludeFolder url="file://$MODULE_DIR$/27_Finite State Machines/praktikum/.pub" />
+      <excludeFolder url="file://$MODULE_DIR$/27_Finite State Machines/praktikum/build" />
+      <excludeFolder url="file://$MODULE_DIR$/27_Finite State Machines/praktikum/.dart_tool" />
     </content>
     <orderEntry type="jdk" jdkName="Android API 32 Platform" jdkType="Android SDK" />
     <orderEntry type="sourceFolder" forTests="false" />

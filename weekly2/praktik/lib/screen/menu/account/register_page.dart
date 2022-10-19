@@ -249,6 +249,7 @@ class _RegisterPageState extends State<RegisterPage> {
   Widget _passwordTextField() {
     return TextFromFields(
       hintText: 'Password',
+      maxLines: 1,
       controller: _passwordController,
       obscureText: scurePassword1 ? true : false,
       validator: (value) {
@@ -276,6 +277,7 @@ class _RegisterPageState extends State<RegisterPage> {
   Widget _passwordValidationTextField() {
     return TextFromFields(
       hintText: 'Confirm Password',
+      maxLines: 1,
       obscureText: scurePassword2 ? true : false,
       controller: _passwordValidation,
       validator: (value) {
