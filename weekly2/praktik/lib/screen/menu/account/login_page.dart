@@ -6,7 +6,7 @@ import 'package:praktik/widget/account_widget/about_us.dart';
 import 'package:praktik/util/color.dart';
 import 'package:praktik/widget/account_widget/header_login.dart';
 import 'package:praktik/widget/widget/button_widget.dart';
-import 'package:praktik/widget/dialog_widget.dart';
+import 'package:praktik/widget/widget/dialog_widget.dart';
 import 'package:praktik/widget/widget/have_account_text.dart';
 import 'package:praktik/widget/widget/text_field_widget.dart';
 
