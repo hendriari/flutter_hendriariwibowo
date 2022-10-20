@@ -7,7 +7,7 @@ import 'package:praktik/screen/menu/course/course_page.dart';
 import 'package:praktik/screen/menu/home/home_page.dart';
 import 'package:praktik/screen/menu/my_course/my_course_page.dart';
 import 'package:praktik/util/color.dart';
-import 'package:praktik/util/show_exit_dialog.dart';
+import 'package:praktik/widget/menu_widget/show_exit_dialog.dart';
 
 class BottomNavigationPage extends StatefulWidget {
   const BottomNavigationPage({Key? key}) : super(key: key);

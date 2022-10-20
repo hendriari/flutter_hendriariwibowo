@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:praktik/screen/menu/bottom_navigation_page.dart';
 import 'package:praktik/util/color.dart';
-import 'package:praktik/widget/button_widget.dart';
+import 'package:praktik/widget/widget/button_widget.dart';
 
 class LandingPages extends StatelessWidget {
   const LandingPages({Key? key}) : super(key: key);
@@ -23,7 +23,7 @@ class LandingPages extends StatelessWidget {
               children: [
                 ///header image
                 Container(
-                  height: sizeHeight * 0.6,
+                  height: sizeHeight * 0.55,
                   width: double.infinity,
                   decoration: BoxDecoration(
                     gradient: LinearGradient(
@@ -48,8 +48,8 @@ class LandingPages extends StatelessWidget {
                 ),
               ],
             ),
-            SizedBox(
-              height: sizeWidth * .15,
+            const SizedBox(
+              height: 30,
             ),
 
             /// icon
@@ -74,15 +74,15 @@ class LandingPages extends StatelessWidget {
               child: Column(
                 children: [
                   Text(
-                    'v 1.0.1',
+                    'v BETA',
                     style: TextStyle(color: MyColor.gray),
                   ),
                 ],
               ),
             ),
 
-            SizedBox(
-              height: sizeHeight * .1,
+            const SizedBox(
+              height: 50,
             ),
 
             /// Start button
