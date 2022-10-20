@@ -1,6 +1,6 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:praktikum/util/about_us_dialog.dart';
+import 'package:praktikum/widget/account_widget/about_us_dialog.dart';
 import 'package:praktikum/util/color.dart';
 
 class AboutUs extends StatefulWidget {

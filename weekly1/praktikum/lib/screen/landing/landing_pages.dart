@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:praktikum/screen/menu/bottom_navigation_page.dart';
 import 'package:praktikum/util/color.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
-import 'package:praktikum/widget/button_widget.dart';
+import 'package:praktikum/widget/widget/button_widget.dart';
 
 class LandingPages extends StatelessWidget {
   const LandingPages({Key? key}) : super(key: key);

@@ -3,11 +3,12 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:praktikum/screen/menu/account/register_page.dart';
 import 'package:praktikum/util/color.dart';
-import 'package:praktikum/util/about_us.dart';
-import 'package:praktikum/widget/button_widget.dart';
-import 'package:praktikum/widget/dialog_widget.dart';
-import 'package:praktikum/widget/have_account_text.dart';
-import 'package:praktikum/widget/text_field_widget.dart';
+import 'package:praktikum/widget/account_widget/about_us.dart';
+import 'package:praktikum/widget/account_widget/header_login.dart';
+import 'package:praktikum/widget/widget/button_widget.dart';
+import 'package:praktikum/widget/widget/dialog_widget.dart';
+import 'package:praktikum/widget/widget/have_account_text.dart';
+import 'package:praktikum/widget/widget/text_field_widget.dart';
 
 class LoginPage extends StatefulWidget {
   const LoginPage({Key? key}) : super(key: key);
@@ -43,149 +44,106 @@ class _LoginPageState extends State<LoginPage> {
     final sizeHeight = MediaQuery.of(context).size.height;
     final sizeWidth = MediaQuery.of(context).size.width;
     return Scaffold(
+      backgroundColor: MyColor.white,
       body: SingleChildScrollView(
         physics: const ScrollPhysics(),
-        child: SizedBox(
-          height: sizeHeight,
-          width: sizeWidth,
-          child: Stack(
-            children: [
-              /// header
-              Container(
-                padding: const EdgeInsets.only(top: 30, bottom: 15),
-                height: 180,
-                width: sizeWidth,
-                decoration: BoxDecoration(
-                  color: MyColor.primaryColor,
-                ),
-                child: Center(
-                  child: Column(
-                    mainAxisAlignment: MainAxisAlignment.center,
-                    children: [
-                      Text(
-                        'Ebow Academy',
-                        style: Theme.of(context)
-                            .textTheme
-                            .headline4!
-                            .copyWith(color: MyColor.white),
-                      ),
-                      const SizedBox(
-                        height: 5,
-                      ),
-                      Container(
-                        width: 195,
-                        alignment: Alignment.centerRight,
-                        child: Text(
-                          'v 1.0.1',
-                          style: TextStyle(color: MyColor.white),
+        child: Stack(
+          children: [
+            Column(
+              children: [
+                /// header login
+                const HeaderLoginWidget(),
+
+                /// konten
+                Padding(
+                  padding: const EdgeInsets.only(
+                    left: 20,
+                    right: 20,
+                  ),
+                  child: Form(
+                    key: _key,
+                    child: Column(
+                      crossAxisAlignment: CrossAxisAlignment.start,
+                      children: [
+                        ///text opening
+                        Text(
+                          'Login',
+                          maxLines: 2,
+                          overflow: TextOverflow.ellipsis,
+                          style: Theme.of(context).textTheme.headline6,
                         ),
-                      ),
-                    ],
-                  ),
-                ),
-              ),
+                        const SizedBox(
+                          height: 20,
+                        ),
 
-              /// konten
-              Positioned(
-                top: 140,
-                child: Container(
-                  height: sizeHeight,
-                  width: sizeWidth,
-                  decoration: BoxDecoration(
-                    color: MyColor.white,
-                    borderRadius: const BorderRadius.only(
-                      topRight: Radius.circular(20),
-                      topLeft: Radius.circular(20),
-                    ),
-                  ),
-                  child: Padding(
-                    padding:
-                        const EdgeInsets.only(left: 20, right: 20, top: 10),
-                    child: Form(
-                      key: _key,
-                      child: Column(
-                        crossAxisAlignment: CrossAxisAlignment.start,
-                        children: [
-                          const SizedBox(
-                            height: 20,
-                          ),
+                        /// email textfield
+                        _emailTextField(),
+                        const SizedBox(
+                          height: 15,
+                        ),
 
-                          ///text opening
-                          Text(
-                            'Login',
-                            maxLines: 2,
-                            overflow: TextOverflow.ellipsis,
-                            style: Theme.of(context).textTheme.headline6,
-                          ),
-                          const SizedBox(
-                            height: 20,
-                          ),
+                        /// password textfield
+                        _passwordTextField(),
+                        const SizedBox(
+                          height: 50,
+                        ),
 
-                          /// email textfield
-                          _emailTextField(),
-                          const SizedBox(
-                            height: 15,
+                        /// button
+                        ButtonWidget(
+                          onPressed: () {
+                            if (_key.currentState!.validate()) {
+                              showDialogWidget(
+                                  context,
+                                  'Fitur login pada Weekly Task 2',
+                                  'Segera Hadir');
+                            }
+                          },
+                          sizeWidth: double.infinity,
+                          backgroundColor: MyColor.dark,
+                          foregroundColor: MyColor.white,
+                          child: Text(
+                            'Masuk',
+                            style: Theme.of(context).textTheme.button,
                           ),
+                        ),
 
-                          /// password textfield
-                          _passwordTextField(),
-                          const SizedBox(
-                            height: 50,
-                          ),
+                        const SizedBox(
+                          height: 10,
+                        ),
 
-                          /// button
-                          ButtonWidget(
-                            onPressed: () {
-                              if (_key.currentState!.validate()) {
-                                showDialogWidget(
-                                    context,
-                                    'Fitur login pada Weekly Task 2',
-                                    'Segera Hadir');
-                              }
-                            },
-                            sizeWidth: double.infinity,
-                            backgroundColor: MyColor.dark,
-                            foregroundColor: MyColor.white,
-                            child: Text(
-                              'Masuk',
-                              style: Theme.of(context).textTheme.button,
-                            ),
+                        ///login button
+                        TextHaveAccount(
+                          onPressed: () {
+                            Navigator.push(
+                              context,
+                              CupertinoPageRoute(
+                                builder: (context) => const RegisterPage(),
+                              ),
+                            );
+                          },
+                          text: 'Belum punya akun ? ',
+                          child: const Text(
+                            'Daftar',
+                            style: TextStyle(fontWeight: FontWeight.w600),
                           ),
-
-                          const SizedBox(
-                            height: 10,
-                          ),
-
-                          ///login button
-                          TextHaveAccount(
-                            onPressed: () {
-                              Navigator.push(
-                                context,
-                                CupertinoPageRoute(
-                                  builder: (context) => const RegisterPage(),
-                                ),
-                              );
-                            },
-                            text: 'Belum punya akun ? ',
-                            child: const Text(
-                              'Daftar',
-                              style: TextStyle(fontWeight: FontWeight.w600),
-                            ),
-                          ),
-                          const SizedBox(
-                            height: 20,
-                          ),
-                        ],
-                      ),
+                        ),
+                        const SizedBox(
+                          height: 90,
+                        ),
+                      ],
                     ),
                   ),
                 ),
-              ),
+              ],
+            ),
 
-              /// about us
-              const AboutUs(),
-            ],
-          ),
+            /// about us
+            SizedBox(
+              height: sizeHeight,
+              width: sizeWidth,
+              child: const AboutUs(),
+            ),
+          ],
         ),
       ),
     );

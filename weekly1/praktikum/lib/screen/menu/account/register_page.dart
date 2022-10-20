@@ -2,10 +2,10 @@ import 'package:email_validator/email_validator.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:praktikum/util/color.dart';
-import 'package:praktikum/widget/button_widget.dart';
-import 'package:praktikum/widget/have_account_text.dart';
-import 'package:praktikum/widget/icon_button_widget.dart';
-import 'package:praktikum/widget/text_field_widget.dart';
+import 'package:praktikum/widget/account_widget/common_header.dart';
+import 'package:praktikum/widget/widget/button_widget.dart';
+import 'package:praktikum/widget/widget/have_account_text.dart';
+import 'package:praktikum/widget/widget/text_field_widget.dart';
 
 class RegisterPage extends StatefulWidget {
   const RegisterPage({Key? key}) : super(key: key);
@@ -45,148 +45,88 @@ class _RegisterPageState extends State<RegisterPage> {
 
   @override
   Widget build(BuildContext context) {
-    final double sizeHeight = MediaQuery.of(context).size.height;
-    final double sizeWidth = MediaQuery.of(context).size.width;
     return Scaffold(
+      backgroundColor: MyColor.white,
       body: SingleChildScrollView(
         physics: const ScrollPhysics(),
+        child: Column(
+          children: [
+            /// header
+            const CommonHeader(title: 'Register',),
 
-        /// kanvas
-        child: SizedBox(
-          height: sizeHeight,
-          width: sizeWidth,
-          child: Stack(
-            children: [
-              /// header
-              Container(
-                padding: const EdgeInsets.fromLTRB(20, 20, 20, 15),
-                height: 180,
-                width: sizeWidth,
-                decoration: BoxDecoration(
-                  color: MyColor.primaryColor,
-                ),
-                child: Center(
-                  child: Row(
-                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                    children: [
-                      IconButtonWidget(
-                        onTap: () {
-                          Navigator.pop(context);
-                        },
-                        heightContainer: 41,
-                        widthContainer: 41,
-                        icon: CupertinoIcons.back,
-                        borderColor: MyColor.border,
-                        iconColor: MyColor.white,
-                      ),
-                      Text(
-                        'Register',
-                        style: Theme.of(context)
-                            .textTheme
-                            .headline5!
-                            .copyWith(color: MyColor.white),
-                      ),
-                      const SizedBox(
-                        width: 29,
-                      ),
-                    ],
-                  ),
-                ),
-              ),
-
-              /// konten
-              Positioned(
-                top: 130,
-                child: Container(
-                  height: sizeHeight,
-                  width: sizeWidth,
-                  decoration: const BoxDecoration(
-                    color: Colors.white,
-                    borderRadius: BorderRadius.only(
-                      topLeft: Radius.circular(20),
-                      topRight: Radius.circular(20),
+            /// konten
+            Padding(
+              padding: const EdgeInsets.only(left: 20, right: 20),
+              child: Form(
+                key: _key,
+                child: Column(
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  children: [
+                    ///username textfield
+                    _usernameTextField(),
+                    const SizedBox(
+                      height: 15,
                     ),
-                  ),
-                  child: Padding(
-                    padding:
-                        const EdgeInsets.only(left: 20, right: 20, top: 10),
-                    child: Form(
-                      key: _key,
-                      child: Column(
-                        crossAxisAlignment: CrossAxisAlignment.start,
-                        children: [
-                          const SizedBox(
-                            height: 30,
-                          ),
 
-                          ///username textfield
-                          _usernameTextField(),
-                          const SizedBox(
-                            height: 15,
-                          ),
+                    /// nomor telepon textfield
+                    _numberTextField(),
+                    const SizedBox(
+                      height: 15,
+                    ),
 
-                          /// nomor telepon textfield
-                          _numberTextField(),
-                          const SizedBox(
-                            height: 15,
-                          ),
+                    /// email textfield
+                    _emailTextField(),
+                    const SizedBox(
+                      height: 15,
+                    ),
 
-                          /// email textfield
-                          _emailTextField(),
-                          const SizedBox(
-                            height: 15,
-                          ),
+                    /// password textfield
+                    _passwordTextField(),
+                    const SizedBox(
+                      height: 15,
+                    ),
 
-                          /// password textfield
-                          _passwordTextField(),
-                          const SizedBox(
-                            height: 15,
-                          ),
+                    /// validasi password
+                    _passwordValidationTextField(),
+                    const SizedBox(
+                      height: 30,
+                    ),
 
-                          /// validasi password
-                          _passwordValidationTextField(),
-                          const SizedBox(
-                            height: 30,
-                          ),
-
-                          /// button
-                          ButtonWidget(
-                            onPressed: () async {},
-                            sizeWidth: double.infinity,
-                            backgroundColor: MyColor.dark,
-                            foregroundColor: MyColor.white,
-                            child: Text(
-                              'Daftar',
-                              style: Theme.of(context).textTheme.button,
-                            ),
-                          ),
-
-                          const SizedBox(
-                            height: 35,
-                          ),
-
-                          ///login button
-                          TextHaveAccount(
-                            onPressed: () {
-                              Navigator.pop(context);
-                            },
-                            text: 'Sudah punya akun ?',
-                            child: const Text(
-                              'Masuk',
-                              style: TextStyle(fontWeight: FontWeight.w600),
-                            ),
-                          ),
-                          const SizedBox(
-                            height: 20,
-                          ),
-                        ],
+                    /// button
+                    ButtonWidget(
+                      onPressed: () async {},
+                      sizeWidth: double.infinity,
+                      backgroundColor: MyColor.dark,
+                      foregroundColor: MyColor.white,
+                      child: Text(
+                        'Daftar',
+                        style: Theme.of(context).textTheme.button,
                       ),
                     ),
-                  ),
+
+                    const SizedBox(
+                      height: 35,
+                    ),
+
+                    ///login button
+                    TextHaveAccount(
+                      onPressed: () {
+                        Navigator.pop(context);
+                      },
+                      text: 'Sudah punya akun ?',
+                      child: const Text(
+                        'Masuk',
+                        style: TextStyle(fontWeight: FontWeight.w600),
+                      ),
+                    ),
+                    const SizedBox(
+                      height: 20,
+                    ),
+                  ],
                 ),
               ),
-            ],
-          ),
+            ),
+          ],
         ),
       ),
     );

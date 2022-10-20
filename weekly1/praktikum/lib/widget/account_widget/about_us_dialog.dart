@@ -1,7 +1,7 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:praktikum/util/color.dart';
-import 'package:praktikum/util/contact_developer.dart';
+import 'package:praktikum/widget/account_widget/contact_developer.dart';
 
 Future aboutUsDialog(BuildContext context) {
   return showCupertinoDialog(
