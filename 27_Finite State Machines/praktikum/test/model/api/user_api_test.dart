@@ -21,7 +21,7 @@ void main() {
             ),
           ]);
 
-      var users = await userApi.fetchUserData();
+      final List<UserModel> users = await userApi.fetchUserData();
       expect(users.isNotEmpty, true);
 
     });

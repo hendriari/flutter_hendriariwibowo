@@ -14,12 +14,12 @@ class UserViewModel with ChangeNotifier {
 
   List<UserModel> get results => _results;
 
-  changeState(UserFinitState s) {
+  void changeState(UserFinitState s) {
     _state = s;
     notifyListeners();
   }
 
-  getUsersData() async {
+  Future<void> getUsersData() async {
     changeState(UserFinitState.loading);
 
     try {
