@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:praktikum/util/color.dart';
 
-class MyCoursePage extends StatelessWidget {
-  const MyCoursePage({Key? key}) : super(key: key);
+class MyBookPage extends StatelessWidget {
+  const MyBookPage({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {

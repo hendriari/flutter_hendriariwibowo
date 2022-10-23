@@ -24,10 +24,10 @@ class LandingPageTwo extends StatelessWidget {
           Padding(
             padding: const EdgeInsets.all(10.0),
             child: Text(
-              'Materi Pembelajaran Terstruktur dan Mudah Dipahami',
+              'Dilengkapi Dengan Fitur Baca Dulu Tanpa Harus Membeli Buku Kesukaanmu',
               style: Theme.of(context).textTheme.headline5,
               textAlign: TextAlign.center,
-              maxLines: 2,
+              maxLines: 4,
             ),
           ),
         ],

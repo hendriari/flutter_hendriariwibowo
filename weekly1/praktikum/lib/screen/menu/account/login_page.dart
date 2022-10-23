@@ -94,7 +94,7 @@ class _LoginPageState extends State<LoginPage> {
                             if (_key.currentState!.validate()) {
                               showDialogWidget(
                                   context,
-                                  'Fitur login pada Weekly Task 2',
+                                  'Fitur login pada Weekly Task 3',
                                   'Segera Hadir');
                             }
                           },

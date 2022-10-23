@@ -1,11 +1,10 @@
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:praktikum/screen/menu/account/auth_login_user.dart';
-import 'package:praktikum/screen/menu/course/course_page.dart';
+import 'package:praktikum/screen/menu/book/book_page.dart';
 import 'package:praktikum/screen/menu/home/home_page.dart';
-import 'package:praktikum/screen/menu/my_course/my_course_page.dart';
+import 'package:praktikum/screen/menu/my_book/my_book_page.dart';
 import 'package:praktikum/util/color.dart';
 import 'package:praktikum/widget/menu_widget/show_exit_dialog.dart';
 
@@ -21,16 +20,16 @@ class _BottomNavigationPageState extends State<BottomNavigationPage> {
 
   List<Widget> pages = [
     const HomePage(),
-    const CoursePage(),
-    const MyCoursePage(),
+    const BookPage(),
+    const MyBookPage(),
     const AuthLoginPage(),
   ];
 
   List<IconData> icons = [
-    CupertinoIcons.house_fill,
+    FontAwesomeIcons.slack,
     FontAwesomeIcons.bookJournalWhills,
-    FontAwesomeIcons.bookOpen,
-    FontAwesomeIcons.userTie,
+    FontAwesomeIcons.bookBookmark,
+    FontAwesomeIcons.signature,
   ];
 
   List<String> mark = [
