@@ -1,7 +1,7 @@
 import 'package:email_validator/email_validator.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:praktik/screen/menu/account/register_page.dart';
+import 'package:praktik/screen/menu/account/not_login/register_page.dart';
 import 'package:praktik/widget/account_widget/about_us.dart';
 import 'package:praktik/util/color.dart';
 import 'package:praktik/widget/account_widget/header_login.dart';
@@ -94,7 +94,7 @@ class _LoginPageState extends State<LoginPage> {
                             if (_key.currentState!.validate()) {
                               showDialogWidget(
                                   context,
-                                  'Fitur login pada Weekly Task 2',
+                                  'Fitur login pada Weekly Task 3',
                                   'Segera Hadir');
                             }
                           },

@@ -1,11 +1,10 @@
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:praktik/screen/menu/account/auth_login_user.dart';
-import 'package:praktik/screen/menu/course/course_page.dart';
+import 'package:praktik/screen/menu/book/book_page.dart';
 import 'package:praktik/screen/menu/home/home_page.dart';
-import 'package:praktik/screen/menu/my_course/my_course_page.dart';
+import 'package:praktik/screen/menu/my_book/book_navigation_page.dart';
 import 'package:praktik/util/color.dart';
 import 'package:praktik/widget/menu_widget/show_exit_dialog.dart';
 
@@ -21,22 +20,22 @@ class _BottomNavigationPageState extends State<BottomNavigationPage> {
 
   List<Widget> pages = [
     const HomePage(),
-    const CoursePage(),
-    const MyCoursePage(),
+    const BookStorePage(),
+    const BookNavigationPage(),
     const AuthLoginPage(),
   ];
 
   List<IconData> icons = [
-    CupertinoIcons.house_fill,
+    FontAwesomeIcons.slack,
     FontAwesomeIcons.bookJournalWhills,
-    FontAwesomeIcons.bookOpen,
-    FontAwesomeIcons.userTie,
+    FontAwesomeIcons.bookBookmark,
+    FontAwesomeIcons.signature,
   ];
 
   List<String> mark = [
     'Home',
-    'Course',
-    'My Course',
+    'Book',
+    'My Book',
     'Account',
   ];
 
@@ -101,13 +100,13 @@ class _BottomNavigationPageState extends State<BottomNavigationPage> {
                 duration: const Duration(seconds: 1),
                 curve: Curves.fastLinearToSlowEaseIn,
                 width:
-                pages == _currentPage ? sizeWidth * .36 : sizeWidth * .165,
+                pages == _currentPage ? sizeWidth * .33 : sizeWidth * .175,
                 alignment: Alignment.center,
                 child: AnimatedContainer(
                   duration: const Duration(seconds: 1),
                   curve: Curves.fastLinearToSlowEaseIn,
                   height: 45,
-                  width: pages == _currentPage ? sizeWidth * .36 : 0,
+                  width: pages == _currentPage ? sizeWidth * .33 : 0,
                   decoration: BoxDecoration(
                     color: pages == _currentPage
                         ? MyColor.white.withOpacity(.2)

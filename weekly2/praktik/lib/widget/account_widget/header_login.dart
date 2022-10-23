@@ -21,7 +21,7 @@ class HeaderLoginWidget extends StatelessWidget {
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
               Text(
-                'Ebow Academy',
+                'Ebow Digital',
                 style: Theme.of(context)
                     .textTheme
                     .headline4!
@@ -31,7 +31,7 @@ class HeaderLoginWidget extends StatelessWidget {
                 height: 5,
               ),
               Container(
-                width: 195,
+                width: 160,
                 alignment: Alignment.centerRight,
                 child: Text(
                   'v BETA',

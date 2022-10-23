@@ -131,7 +131,7 @@ class _ContactDeveloperPageState extends State<ContactDeveloperPage> {
   /// username
   Widget _firstNameTextField() {
     return TextFromFields(
-      hintText: 'First Name',
+      hintText: 'Nama depan',
       obscureText: false,
       maxLines: 1,
       controller: _firstNameController,
@@ -147,7 +147,7 @@ class _ContactDeveloperPageState extends State<ContactDeveloperPage> {
   /// nomor telepon
   Widget _lastNameTextField() {
     return TextFromFields(
-      hintText: 'Last Name',
+      hintText: 'Nama belakang',
       obscureText: false,
       maxLines: 1,
       controller: _lastNameController,

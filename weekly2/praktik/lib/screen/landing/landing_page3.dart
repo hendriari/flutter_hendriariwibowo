@@ -26,10 +26,10 @@ class LandingPageThree extends StatelessWidget {
           Padding(
             padding: const EdgeInsets.all(10.0),
             child: Text(
-              'Jam Belajar yang Flexible',
+              'Nikmati Sensasi Membaca Santai Variasimu',
               style: Theme.of(context).textTheme.headline5,
               textAlign: TextAlign.center,
-              maxLines: 2,
+              maxLines: 4,
             ),
           ),
         ],

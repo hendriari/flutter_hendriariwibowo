@@ -9,11 +9,11 @@ class HomeHeader extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     final double sizeWidth = MediaQuery.of(context).size.width;
-    final double sizeHeight = MediaQuery.of(context).size.height;
+    final double paddingTop = MediaQuery.of(context).padding.top;
     return Stack(
       children: [
         Container(
-          padding: EdgeInsets.only(top: sizeHeight * .1, left: 20),
+          padding: EdgeInsets.only(top: paddingTop + 8, left: 20),
           height: 180,
           width: double.infinity,
           decoration: BoxDecoration(

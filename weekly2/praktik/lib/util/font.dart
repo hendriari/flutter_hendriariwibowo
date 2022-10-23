@@ -13,7 +13,7 @@ final myTextTheme = TextTheme(
       fontSize: 27, fontWeight: FontWeight.w600, letterSpacing: 0.25, color: MyColor.dark),
   headline5: GoogleFonts.urbanist(fontSize: 22, fontWeight: FontWeight.w400),
   headline6: GoogleFonts.urbanist(
-      fontSize: 16, fontWeight: FontWeight.w500, letterSpacing: 0.15),
+      fontSize: 16, fontWeight: FontWeight.w600, letterSpacing: 0.15),
   bodyText1: GoogleFonts.urbanist(
       fontSize: 15, fontWeight: FontWeight.w400, letterSpacing: 0.5),
   bodyText2: GoogleFonts.urbanist(

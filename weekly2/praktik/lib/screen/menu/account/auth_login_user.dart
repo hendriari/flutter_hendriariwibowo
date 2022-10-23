@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:praktik/screen/menu/account/account_page.dart';
-import 'package:praktik/screen/menu/account/login_page.dart';
+import 'package:praktik/screen/menu/account/already_login/account_page.dart';
+import 'package:praktik/screen/menu/account/not_login/login_page.dart';
 
 class AuthLoginPage extends StatefulWidget {
   const AuthLoginPage({Key? key}) : super(key: key);

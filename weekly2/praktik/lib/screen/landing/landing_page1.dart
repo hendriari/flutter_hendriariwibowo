@@ -26,10 +26,10 @@ class LandingPageOne extends StatelessWidget {
           Padding(
             padding: const EdgeInsets.all(10.0),
             child: Text(
-              'Raih dan Wujudkan Impianmu sebagai Developer Professional',
+              'Temukan Buku Favorit Dengan Mudah Melalui Smartphonemu',
               style: Theme.of(context).textTheme.headline5,
               textAlign: TextAlign.center,
-              maxLines: 2,
+              maxLines: 4,
             ),
           ),
         ],

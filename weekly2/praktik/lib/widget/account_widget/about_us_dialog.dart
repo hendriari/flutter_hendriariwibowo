@@ -18,7 +18,7 @@ Future aboutUsDialog(BuildContext context) {
                 height: 5,
               ),
               Text(
-                'Ebow Academy adalah platform digital yang memiliki tujuan mengembangkan developer flutter indonesia, pelatihan coding intensif bagi pemula, baik yang mempunyai background IT maupun Non-IT',
+                'Ebow Digital adalah Book Store yang menyediakan catalog novel. Ebow Digital menjamin Transaksi aman, Gratis Biaya Pengiriman, Tanpa biaya tambahan, dan Bergaransi sampai Buku di terima dengan keadaan baik',
                 style: Theme.of(context).textTheme.bodyText1,
                 textAlign: TextAlign.start,
               ),

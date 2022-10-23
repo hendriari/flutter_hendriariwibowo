@@ -1,9 +1,11 @@
 import 'package:cached_network_image/cached_network_image.dart';
 import 'package:flutter/material.dart';
 import 'package:praktik/widget/home_widget/home_header.dart';
+import 'package:praktik/widget/home_widget/novel_best_sellers.dart';
+import 'package:praktik/widget/home_widget/novel_terbaru.dart';
 import 'package:praktik/widget/home_widget/promo_listview.dart';
-import 'package:praktik/widget/home_widget/testi_carousel.dart';
 import 'package:praktik/util/color.dart';
+import 'package:praktik/widget/widget/shimmer_laoding.dart';
 
 class HomePage extends StatelessWidget {
   const HomePage({Key? key}) : super(key: key);
@@ -20,6 +22,8 @@ class HomePage extends StatelessWidget {
           children: [
             /// header
             const HomeHeader(),
+
+
 
             Padding(
               padding: const EdgeInsets.only(left: 15.0),
@@ -42,6 +46,44 @@ class HomePage extends StatelessWidget {
             Padding(
               padding: const EdgeInsets.only(left: 15),
               child: Text(
+                'Novel Terlaris',
+                style: Theme.of(context).textTheme.headline6,
+              ),
+            ),
+
+            const SizedBox(
+              height: 10,
+            ),
+
+            /// novel best widget
+            const NovelBestSeller(),
+
+            const SizedBox(
+              height: 15,
+            ),
+
+            Padding(
+              padding: const EdgeInsets.only(left: 15),
+              child: Text(
+                'Novel Terbaru',
+                style: Theme.of(context).textTheme.headline6,
+              ),
+            ),
+
+            const SizedBox(
+              height: 10,
+            ),
+
+            /// novel best widget
+            const NovelTerbaru(),
+
+            const SizedBox(
+              height: 15,
+            ),
+
+            Padding(
+              padding: const EdgeInsets.only(left: 15),
+              child: Text(
                 'Event',
                 style: Theme.of(context).textTheme.headline6,
               ),
@@ -50,7 +92,7 @@ class HomePage extends StatelessWidget {
             /// event
             CachedNetworkImage(
               imageUrl:
-                  'https://bitlabs.id/blog/wp-content/uploads/2020/12/apa-itu-coding-1152x648.png',
+                  'https://minanews.net/wp-content/uploads/2022/06/IIBF2022-e1654170929637.png',
               imageBuilder: (context, imageProvider) => Container(
                 margin: const EdgeInsets.all(10),
                 height: 170,
@@ -70,32 +112,19 @@ class HomePage extends StatelessWidget {
                   ),
                 ),
               ),
-              placeholder: (context, url) => const CircularProgressIndicator(),
+              placeholder: (context, url) => ClipRRect(
+                borderRadius: BorderRadius.circular(20),
+                child: ShimmersLoading(
+                  height: 170,
+                  width: sizeWidth,
+                ),
+              ),
               errorWidget: (context, url, error) => const Center(
                 child: Text('Can\'t load image'),
               ),
             ),
 
             const SizedBox(
-              height: 15,
-            ),
-
-            Padding(
-              padding: const EdgeInsets.only(left: 15),
-              child: Text(
-                'Testimoni Siswa',
-                style: Theme.of(context).textTheme.headline6,
-              ),
-            ),
-
-            const SizedBox(
-              height: 10,
-            ),
-
-            /// testimoni widget
-            const TestiCarousel(),
-
-            SizedBox(
               height: 90,
             ),
           ],
