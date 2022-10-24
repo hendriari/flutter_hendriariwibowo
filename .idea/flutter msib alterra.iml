@@ -285,6 +285,9 @@
       <excludeFolder url="file://$MODULE_DIR$/28_UI Testing/praktikum/praktik/windows/flutter/ephemeral/.plugin_symlinks/path_provider_windows/.dart_tool" />
       <excludeFolder url="file://$MODULE_DIR$/28_UI Testing/praktikum/praktik/windows/flutter/ephemeral/.plugin_symlinks/path_provider_windows/.pub" />
       <excludeFolder url="file://$MODULE_DIR$/28_UI Testing/praktikum/praktik/windows/flutter/ephemeral/.plugin_symlinks/path_provider_windows/build" />
+      <excludeFolder url="file://$MODULE_DIR$/weekly3/praktikum/ebow_book/build" />
+      <excludeFolder url="file://$MODULE_DIR$/weekly3/praktikum/ebow_book/.dart_tool" />
+      <excludeFolder url="file://$MODULE_DIR$/weekly3/praktikum/ebow_book/.pub" />
     </content>
     <orderEntry type="jdk" jdkName="Android API 32 Platform" jdkType="Android SDK" />
     <orderEntry type="sourceFolder" forTests="false" />
